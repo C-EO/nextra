@@ -148,9 +148,9 @@ const NextLink = ({ currentIndex }) => {
 
   return (
     <Link href={next.route}>
-      <a className="text-lg font-medium no-underline hover:text-blue-400 flex items-center">
+      <a className="text-lg font-medium no-underline hover:text-blue-400 flex items-center ml-2">
         {next.title}
-        <ArrowRight className="inline ml-1" />
+        <ArrowRight className="inline ml-1 flex-shrink-0" />
       </a>
     </Link>
   )
@@ -165,8 +165,8 @@ const PrevLink = ({ currentIndex }) => {
 
   return (
     <Link href={prev.route}>
-      <a className="text-lg font-medium no-underline hover:text-blue-400 flex items-center">
-        <ArrowRight className="transform rotate-180 inline mr-1" />
+      <a className="text-lg font-medium no-underline hover:text-blue-400 flex items-center mr-2">
+        <ArrowRight className="transform rotate-180 inline mr-1 flex-shrink-0" />
         {prev.title}
       </a>
     </Link>
@@ -260,7 +260,7 @@ export default ({ children }) => {
             </main>
 
             <footer className="mt-24">
-              <nav className="flex justify-between flex-col-reverse md:flex-row items-center md:items-end">
+              <nav className="flex flex-row items-center justify-between">
                 <div>
                   <PrevLink currentIndex={currentIndex} />
                 </div>

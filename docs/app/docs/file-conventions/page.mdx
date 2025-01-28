@@ -1,0 +1,27 @@
+---
+asIndexPage: true
+description:
+  Nextra's File Conventions guide details the structure and organization of
+  files and directories within a Nextra project, including the use of
+  `page.mdx`, `_meta.js`, and `mdx-components.js` files, as well as the
+  `content` and `src` directories.
+---
+
+import { Cards } from 'nextra/components'
+import { FileIcon, FolderIcon, MdxIcon } from 'nextra/icons'
+import { MDXRemote } from 'nextra/mdx-remote'
+import { createIndexPage, getPageMap } from 'nextra/page-map'
+
+# File Conventions
+
+<MDXRemote
+  compiledSource={await createIndexPage(
+    await getPageMap('/docs/file-conventions')
+  )}
+  components={{
+    Cards,
+    FileIcon,
+    FolderIcon,
+    MdxIcon
+  }}
+/>
